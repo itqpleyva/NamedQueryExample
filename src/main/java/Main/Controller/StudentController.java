@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import Main.Model.Student;
 
 @RestController
-public class UserController {
+public class StudentController {
 
 	@Autowired
 	private EntityManager em;
