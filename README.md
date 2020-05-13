@@ -1,5 +1,5 @@
-# JPAMysqlExample
-Example of the JPA and Mysql Database integration
+# NamedQuerylExample
+Example of the use of @NamedQuery
 
 <p>In this example, a database ("example_mysql") is created based on Msql</p>
 
@@ -15,13 +15,13 @@ Example of the JPA and Mysql Database integration
 <p>The StudentInterface is in charge of create the JPA repository</p>
 <p>The DataLoader class is in charge of populating the BD</p>
 
-<p>The configuration of the connection with the mysql db is defined in the appliction properties file</p>
+<p>Three named queries are defined in the model class</p>
+
 <ul>
-<li>spring.datasource.url=jdbc:mysql://localhost:3306/mysql_example?serverTimezone=UTC</li>
-<li>spring.datasource.username=root</li>
-<li>spring.datasource.password=</li>
-<li>spring.jpa.hibernate.ddl-auto=create-drop</li>
-<li>spring.jpa.show-sql=true</li>
+<li>@NamedQuery(name = "Student.findByEmailAddress", query = "select u from Student u where u.email = :email")</li>
+<li>@NamedQuery(name = "Student.findByName", query = "select u from Student u where u.name = :name")</li>
+<li>@NamedQuery(name = "Student.findAll", query = "SELECT u FROM Student u")</li>
 </ul>
-<p>The final result is the creation and insertion of data in the student table</p>
-<img  src="tabla.png"/>
+
+<p>These named query are used in the controller class (StudentController)</p>
+<img src="controller.png"/>
