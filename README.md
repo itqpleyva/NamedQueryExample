@@ -1,4 +1,4 @@
-# NamedQuerylExample
+# NamedQueryExample
 Example of the use of @NamedQuery
 
 <p>In this example, a database ("example_mysql") is created based on Msql</p>
