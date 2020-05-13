@@ -9,11 +9,13 @@ Example of the use of @NamedQuery
 <li>Student</li>
 <li>StudentInterface</li>
 <li>DataLoader</li>
+<li>StudentController</li>
 </ul>
 
 <p>The Student class is in charge of representing the model</p>
 <p>The StudentInterface is in charge of create the JPA repository</p>
 <p>The DataLoader class is in charge of populating the BD</p>
+<p>TheStudentController class is in charge of bring the rest endpoints</p>
 
 <p>Three named queries are defined in the model class</p>
 
